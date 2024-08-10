@@ -54,7 +54,7 @@ def calculate_damage(attacker, defender):
     type2 = attacker["type2"]
 
     defence_type2 = ((defender["against_"+type2]/4)*100) if type2 else 0
-    damage = (attacker["attack"]/200)*100 - (((defender["against_"+type1]/4)*100) - defence_type2)
+    damage = (attacker["attack"]/200)*100 - (((defender["against_"+type1]/4)*100) + defence_type2)
     return damage
 
 # Battle simulator function
